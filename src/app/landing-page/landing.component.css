@@ -1,0 +1,15 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav {
+    width:20rem;
+    height: 100%;
+}
+
+mat-sidenav-content {
+    height: 100%;
+    background: #F6F6F6;
+    border-radius: 40px;
+}
+

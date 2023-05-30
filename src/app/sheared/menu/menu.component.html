@@ -1,0 +1,21 @@
+<div class="navigation-bar-section">
+    <div class="navigation-bar">
+        <div class="menu">
+            <nav *ngIf="home" (click)="activeMenu('home')">Home</nav>
+            <nav class="active" *ngIf="!home" (click)="activeMenu('home')">Home</nav>
+            <nav *ngIf="about" (click)="activeMenu('about')">About</nav>
+            <nav class="active" *ngIf="!about" (click)="activeMenu('about')">About</nav>
+            <nav *ngIf="product" (click)="activeMenu('product')">Products</nav>
+            <nav class="active" *ngIf="!product" (click)="activeMenu('product')">Products</nav>
+            <nav *ngIf="contact" (click)="activeMenu('contact')">Contact</nav>
+            <nav class="active" *ngIf="!contact" (click)="activeMenu('contact')">Contact</nav>
+        </div>
+
+        <div class="menu2">
+            <nav class="auth" *ngIf="signin" (click)="activeAuthMenu('signin')">Sign in</nav>
+            <nav class="auth active" *ngIf="!signin" (click)="activeAuthMenu('signin')">Sign in</nav>
+            <nav class="auth" *ngIf="register" (click)="activeAuthMenu('register')">Register</nav>
+            <nav class="auth active" *ngIf="!register" (click)="activeAuthMenu('register')">Register</nav>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Gilroy";
+    src: url('/assets/fonts/Gilroy-FREE/Gilroy-Light.otf')
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+:root {
+    --font-family: "Rajdhani"
+}
+
+.containers {
+    margin: 0 auto;
+    width: min(78%, 70rem);
+    max-width: 1500px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #8FBDE8;}
+
+
+
