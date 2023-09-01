@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage-service/local-storage.service';
 import { RoutingService } from 'src/app/services/routing-service/routing.service';
+import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -8,13 +10,17 @@ import { RoutingService } from 'src/app/services/routing-service/routing.service
 })
 export class ResetPasswordComponent {
   seePassword:boolean=false;
-  inputType:string='text'
-
-  recoveryEmail = {
-    "email": "",
+  inputType:string='password'
+  response:any;
+  newPassword = {
+    "password": "",
+    "confirm_password": ""
   }
 
-  constructor(public router: RoutingService){}
+  constructor(public router: RoutingService,
+      private api: ServerRequestService,
+      private store: LocalStorageService
+    ){}
 
 
     // this function router user to another page
@@ -25,7 +31,7 @@ export class ResetPasswordComponent {
     // this fuction clears the field on click of cancel button
     clear(field:string){
       if(field=='email'){
-        this.recoveryEmail.email = "";
+        this.newPassword.password = "";
       }
     }
   
@@ -46,6 +52,28 @@ export class ResetPasswordComponent {
       this.inputType = type;
       console.log(type)
     }
+  }
+
+
+  // this function updates the user password to a new one
+  updatePassword(){
+    let get_id = this.store.getStoredData("takarPasswordResetData")
+    console.log(get_id.id)
+    let id = get_id.id
+
+    this.api.post('auth/reset-password/' + id, this.newPassword).subscribe(
+      res=>{
+        this.response = res;
+        console.log(this.response)
+        this.store.removeItem("takarPasswordResetData")
+        this.route('')
+      }, 
+      err=>{
+        console.log(err)
+      }
+    )
+
+    
   }
   
 }

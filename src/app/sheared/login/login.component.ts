@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage-service/local-storage.service';
 import { RoutingService } from 'src/app/services/routing-service/routing.service';
+import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +11,16 @@ import { RoutingService } from 'src/app/services/routing-service/routing.service
 export class LoginComponent {
 
   seePassword:boolean=false;
-  inputType:string='text'
-
+  inputType:string='password'
   loginData = {
     "email": "",
     "password": ""
   }
+  response:any;
+  loader:boolean=false;
 
 
-  constructor(public router: RoutingService){}
+  constructor(public router: RoutingService, private api: ServerRequestService, public store: LocalStorageService){}
 
   ngOnInit(){}
 
@@ -32,7 +35,6 @@ export class LoginComponent {
       this.loginData.email = "";
     }
   }
-
 
   // this function makes password visible
   passwordView(fieldType:string){
@@ -50,5 +52,30 @@ export class LoginComponent {
       console.log(type)
     }
   }
+
+  // this function facilitates login
+  login(){
+    // console.log(this.loginData)
+    this.loader = true;
+
+    this.api.post("auth/login/", this.loginData).subscribe(
+      res=>{
+        this.response = res,
+        console.log(this.response)
+        if(this.response.message){
+          this.store.saveItemObject("takaruser", this.response.data)
+          this.route('dashboard')
+          this.loader=false;
+        }else{
+          alert("Invalid email or password")
+          this.loader = false;
+        }
+      },
+      err=>{
+        console.log(err)
+      }
+    )
+  }
+
 
 }

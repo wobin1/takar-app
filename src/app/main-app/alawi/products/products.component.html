@@ -1,0 +1,36 @@
+<div class="fund-product-section">
+    <div class="fund-product">
+        <div class="submit-button">
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Product_name</th>
+                    <th scope="col">Payment sequence</th>
+                    <th scope="col">Expected amount</th>
+                    <th scope="col">Product balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of products.data">
+                    <td class="name"> 
+                        {{row.product_name}} 
+                        
+                    </td>
+                    <td >
+                      <div class="type">
+                        <span class="icon1">
+                            {{row.payment_sequence}}
+                        </span>
+                      </div>
+                      
+                    </td>
+                    <td>{{row.amount_to_be_paid}}</td>
+                    <td>{{row.product_balance}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="chart-section">
+    <div class="page-title">Finaces</div>
+    <div class="chart">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLagend" 
+        [type]="'line'"> (chartHover)="chartHovered($event)" [chartClick]="chartClicked($event)"></canvas>
+    </div>
+</div>
+

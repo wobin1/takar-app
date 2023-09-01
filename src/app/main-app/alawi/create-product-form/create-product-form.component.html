@@ -1,0 +1,45 @@
+<div class="create-product-section">
+    <div class="create-form">
+        <mat-form-field>
+            <mat-label>Product Name</mat-label>
+            <input matInput [(ngModel)]="productData.product_name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Pay</mat-label>
+            <mat-select matInput [(ngModel)]="productData.payment_sequence">
+                <mat-option value="Daily">Daily</mat-option>
+                <mat-option value="Weekly">Weekly</mat-option>
+                <mat-option value="Monthly">monthly</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Amount to be Paid</mat-label>
+            <input matInput [(ngModel)]="productData.amount_to_be_paid">
+            
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Fund Amount</mat-label>
+            <input matInput [(ngModel)]="productData.product_amount">
+            
+          </mat-form-field>
+    
+    </div>
+    
+    <div class="submit-button">
+        <button mat-raised-button color="primary" 
+                (click)="createProduct()" 
+                fxLayout="row"
+                fxFlex="10%"
+                fxLayoutAlign="center center"
+                fxLayoutGap="1rem" fxFlex="50%">
+            <div *ngIf="loader" class="loader" fxFlex="10%">
+                <app-loader></app-loader>
+            </div>
+             <span fxFlex="100%" *ngIf="!loader">Create Product</span>
+        </button>
+        
+    </div>
+</div>

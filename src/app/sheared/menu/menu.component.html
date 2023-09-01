@@ -1,6 +1,13 @@
-<div class="navigation-bar-section">
-    <div class="navigation-bar">
-        <div class="menu">
+<div class="navigation-bar-section" >
+    <div class="navigation-bar" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="toggle" (click)="onClick()" fxHide fxShow.sm fxShow.xs fxFlex.sm="50%" fxFlex.xs="20%">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </span>
+        </div>
+        <div class="menu" fxShow fxHide.sm fxHide.xs fxFlex="50%"  fxFlex="50%" fxFlex.xs="40%">
             <nav *ngIf="home" (click)="activeMenu('home')">Home</nav>
             <nav class="active" *ngIf="!home" (click)="activeMenu('home')">Home</nav>
             <nav *ngIf="about" (click)="activeMenu('about')">About</nav>
@@ -11,7 +18,7 @@
             <nav class="active" *ngIf="!contact" (click)="activeMenu('contact')">Contact</nav>
         </div>
 
-        <div class="menu2">
+        <div class="menu2" fxLayout="row" fxLayoutGap="1rem" fxFlex="50%"  fxFlex="50%" fxFlex.xs="80%" fxLayoutAlign="end center">
             <nav class="auth" *ngIf="signin" (click)="activeAuthMenu('signin')">Sign in</nav>
             <nav class="auth active" *ngIf="!signin" (click)="activeAuthMenu('signin')">Sign in</nav>
             <nav class="auth" *ngIf="register" (click)="activeAuthMenu('register')">Register</nav>

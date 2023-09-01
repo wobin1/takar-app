@@ -5,6 +5,10 @@ import { ButtonComponent } from './button/button.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { MaterialModule } from '../material/material.module';
+import { LoaderComponent } from './loader/loader.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -13,17 +17,24 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     ButtonComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AppHeaderComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
   exports: [
     MenuComponent,
     ButtonComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AppHeaderComponent,
+    LoaderComponent
+    
   ]
 })
 export class ShearedModule { }

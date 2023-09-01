@@ -1,0 +1,57 @@
+
+
+.header {
+    margin-top: 2.188rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.page-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #121B28;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notifcation-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: #C4C4C4;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-pix {
+    width: 100;
+}
+
+.img {
+    width: 45px;
+    height: 43px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

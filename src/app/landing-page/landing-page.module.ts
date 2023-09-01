@@ -12,6 +12,7 @@ import { EntryComponent } from './entry/entry.component';
 import { LandingComponent } from './landing.component';
 import { HomeComponent } from './home/home.component';
 import { Home2Component } from './home2/home2.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -30,7 +31,8 @@ import { Home2Component } from './home2/home2.component';
     AppRoutingModule,
     ShearedModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
 
     
   ]

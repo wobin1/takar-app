@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { RoutingService } from 'src/app/services/routing-service/routing.service';
+import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -8,6 +10,7 @@ import { RoutingService } from 'src/app/services/routing-service/routing.service
 })
 export class ForgetPasswordComponent {
 
+  response:any;
   seePassword:boolean=false;
   inputType:string='text'
 
@@ -15,12 +18,14 @@ export class ForgetPasswordComponent {
     "email": "",
   }
 
-  constructor(public router: RoutingService){}
+  constructor(public router: Router,
+              private api: ServerRequestService
+            ){}
 
 
     // this function router user to another page
-    route(page:string){
-      this.router.route(page)
+    route(page:any){
+      this.router.navigateByUrl(page)
     }
   
     // this fuction clears the field on click of cancel button
@@ -28,6 +33,20 @@ export class ForgetPasswordComponent {
       if(field=='email'){
         this.recoveryEmail.email = "";
       }
+    }
+
+    // this function verifies the user email
+    emailVerification(){
+      this.api.post('auth/forget-password/', this.recoveryEmail).subscribe(
+        res=>{
+          this.response = res
+          console.log(this.response)
+          this.route(this.response.redirectUrl)
+        },
+        err=>{
+          console.log(err)
+        }
+      )
     }
   
   

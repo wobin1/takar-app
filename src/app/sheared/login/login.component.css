@@ -9,11 +9,12 @@
 }
 
 .field {
-    width: 94%;
+    margin-bottom: 1rem;
+    width: 100%;
     background: #EAF0F7;
     border-radius: 10px;
-    height: 37px;
-    padding: 3%;
+    height: 60px;
+    /* padding: 3%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,6 @@ input {
     border: none;
     outline: none;
     background-color: transparent;
-
     font-family: 'Gilroy';
     font-style: normal;
     font-weight: 500;

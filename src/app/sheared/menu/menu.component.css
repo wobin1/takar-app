@@ -1,7 +1,7 @@
 .navigation-bar {
     margin-top: 6%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
 }
 
 .menu {
@@ -12,10 +12,7 @@
 }
 
 .menu2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 3%;
+    
 }
 
 nav {
@@ -61,4 +58,10 @@ nav:active {
 
 .active {
     border: 1px solid #4461F2;;
+}
+
+.toggle span {
+    padding: 0.5rem;
+    background-color: var(--grey8);
+    border-radius: 50%;
 }

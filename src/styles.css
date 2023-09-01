@@ -12,6 +12,40 @@ html, body {
 
 :root {
     --font-family: "Rajdhani"
+
+    --grey1: hsl(0, 0%, 15%);
+    --grey2: hsl(0, 0%, 25%);
+    --grey3: hsl(0, 0%, 35%);
+    --grey4: hsl(0, 0%, 45%);
+    --grey5: hsl(0, 0%, 55%);
+    --grey6: hsl(0, 0%, 65%);
+    --grey7: hsl(0, 0%, 75%);
+    --grey8: hsl(0, 0%, 85%);
+    --grey9: hsl(0, 0%, 95%);
+
+    --green1: hsl(166, 100%, 37%);
+    --green2: hsl(166, 100%, 47%);
+    --green3: hsl(166, 100%, 57%);
+    --green4: hsl(166, 100%, 67%);
+    --green5: hsl(166, 100%, 77%);
+    --green6: hsl(166, 100%, 87%);
+    --green7: hsl(166, 100%, 97%);;
+
+    --red1: hsl(0, 100%, 35%);
+    --red2: hsl(0, 100%, 45%);
+    --red3: hsl(0, 100%, 55%);
+    --red4: hsl(0, 100%, 65%);
+    --red5: hsl(0, 100%, 75%);
+    --red6: hsl(0, 100%, 85%);
+    --red7: hsl(0, 100%, 95%);
+
+    --yellow1: hsl(39, 100%, 36%);
+    --yellow1: hsl(39, 100%, 46%);
+    --yellow2: hsl(39, 100%, 56%);
+    --yellow3: hsl(39, 100%, 66%);
+    --yellow4: hsl(39, 100%, 76%);
+    --yellow5: hsl(39, 100%, 86%);
+    --yellow6: hsl(39, 100%, 96%);
 }
 
 .containers {
@@ -19,6 +53,19 @@ html, body {
     width: min(78%, 70rem);
     max-width: 1500px;
 }
+
+.app-container {
+    margin: 0 auto;
+    width: min(92%, 80rem)
+}
+
+/* @media(min-width: 500px){
+    .app-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+} */
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #8FBDE8;}
 

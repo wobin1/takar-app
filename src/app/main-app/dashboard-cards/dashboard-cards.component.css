@@ -1,0 +1,49 @@
+.card-section {
+    width: 100%;
+    height: 88%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1%;
+}
+
+.card {
+    width: 98%;
+    height: 93%;
+    min-width: 250px;
+    background: #FFFFFF;
+    padding: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+}
+
+.icon {
+    margin-bottom: 5%;
+}
+
+
+.amount {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #121B28;
+}
+
+.label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #121B28;
+}

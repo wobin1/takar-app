@@ -6,14 +6,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  @Input() text!: string;
-  @Input() color!:string;
-  @Input() width!:string;
-  @Input() height!:string;
-  @Input() border!:string;
-  @Input() padding!:string;
 
   @Output() btnClick = new EventEmitter;
+
+  sidenave:boolean = true;
 
 
   constructor(){}
@@ -21,6 +17,6 @@ export class ButtonComponent {
   ngOnInit(){}
 
   onClick(){
-
+    this.btnClick.emit()
   }
 }

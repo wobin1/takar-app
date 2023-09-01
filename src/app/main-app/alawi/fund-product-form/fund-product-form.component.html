@@ -1,0 +1,12 @@
+<div class="fund-product-section">
+    <div class="fund-product">
+        <div class="submit-button">
+            <button mat-raised-button color="primary">
+                <div *ngIf="loader" class="loader" fxFlex="10%">
+                    <app-loader></app-loader>
+                </div>
+                 <span fxFlex="50%" *ngIf="!loader">Fund</span>
+            </button>
+        </div>
+    </div>
+</div>

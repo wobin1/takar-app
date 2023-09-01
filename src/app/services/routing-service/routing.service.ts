@@ -34,5 +34,24 @@ export class RoutingService {
       this.router.navigateByUrl('reset-password')
     }
 
+    if(page=='dashboard'){
+      this.router.navigateByUrl('app/dashboard')
+    }
+    if(page=='alawi'){
+      this.router.navigateByUrl('app/alawance')
+    }
+    if(page=='savings'){
+      this.router.navigateByUrl('app/savings')
+    }
+    if(page=='transaction'){
+      this.router.navigateByUrl('app/transactions')
+    }
+    if(page=='forget-password-verificaton'){
+      this.router.navigateByUrl('forget-password-verificaton')
+    }
+    
+    
+    
+
   }
 }

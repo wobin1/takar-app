@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RoutingService } from '../services/routing-service/routing.service';
 
 @Component({
   selector: 'app-landing',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
+  sidenav:boolean=true;
 
+  constructor(public router: RoutingService){}
+
+  ngOnInit(){}
+
+  toggleSidenav(){
+    this.sidenav = !this.sidenav;
+  }
+
+  route(page:string){
+    this.router.route(page)
+  }
+  
 }

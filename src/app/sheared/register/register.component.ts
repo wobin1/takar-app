@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RoutingService } from 'src/app/services/routing-service/routing.service';
+import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
 @Component({
   selector: 'app-register',
@@ -9,21 +10,19 @@ import { RoutingService } from 'src/app/services/routing-service/routing.service
 export class RegisterComponent {
 
   seePassword:boolean=false;
-  inputType:string='text'
-
+  inputType:string='password'
+  response:any;
   registerData = {
     "first_name": "",
     "last_name": "",
     "email": "",
     "phone_number": "",
-    "state": "",
     "password": "",
-    "confirm_password": ""
-    
+    "current_site": "http://localhost:4200/acount-verification/"
   }
 
 
-  constructor(public router: RoutingService){}
+  constructor(public router: RoutingService, private api: ServerRequestService, ){}
 
   route(page:string){
     this.router.route(page)
@@ -54,5 +53,19 @@ export class RegisterComponent {
       this.inputType = type;
       console.log(type)
     }
+  }
+
+  register(){
+    console.log(this.registerData)
+    this.api.post('users/create/', this.registerData).subscribe(
+      res => {
+        this.response = res
+        console.log(this.response)
+        // this.route('signin')
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
 }

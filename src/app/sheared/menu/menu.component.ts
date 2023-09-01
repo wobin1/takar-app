@@ -26,10 +26,10 @@ export class MenuComponent {
   }
 
   // this function accept a click event from anywhere this component is click
-  onClick(page:string){
+  onClick(){
     this.btnClick.emit()
     console.log("auth button clicked")
-    this.activeMenu(page)
+    // this.activeMenu(page)
   }
 
   activeAuthMenu(page:string){

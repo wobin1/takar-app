@@ -1,5 +1,5 @@
 
-<div class="form">
+<div class="form" fxLayout="column" fxLayoutAlign="center end" fxLayoutAlign.sm="center start" fxLayoutGap="1rem">
 
    <div class="name">
      <!-- first name field -->
@@ -21,6 +21,17 @@
     </div>
 
    </div>
+
+   <!-- phone number field -->
+   <div class="field">
+    <input [(ngModel)]="registerData.phone_number"  type="text" placeholder="Phone number">
+    <span class="icon" (click)="clear('email')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg></span>
+</div>
+
+
     <!-- email field -->
     <div class="field">
         <input [(ngModel)]="registerData.email"  type="text" placeholder="Enter Email">
@@ -31,19 +42,12 @@
     </div>
 
 
-    <!-- phone number field -->
-    <div class="field">
-        <input [(ngModel)]="registerData.phone_number"  type="text" placeholder="Phone number">
-        <span class="icon" (click)="clear('email')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-          </svg></span>
-    </div>
+    
 
 
     <!-- password field -->
     <div class="field">
-        <input type={{inputType}} placeholder="password">
+        <input [(ngModel)]="registerData.password" type={{inputType}} placeholder="password">
         <span class="icon" *ngIf="!seePassword" (click)="passwordView('text')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
             <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
             <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
@@ -77,6 +81,6 @@
 
     <!-- Submit button -->
     <div class="submit-button">
-        <button>Register</button>
+        <button (click)="register()">Register</button>
     </div>
 </div>
