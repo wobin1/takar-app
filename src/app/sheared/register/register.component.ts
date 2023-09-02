@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from 'ng2-charts';
 import { RoutingService } from 'src/app/services/routing-service/routing.service';
 import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
@@ -9,6 +10,7 @@ import { ServerRequestService } from 'src/app/services/server-request-service/se
 })
 export class RegisterComponent {
 
+  loader:boolean=false;
   seePassword:boolean=false;
   inputType:string='password'
   response:any;
@@ -56,15 +58,18 @@ export class RegisterComponent {
   }
 
   register(){
+    this.loader=true;
     console.log(this.registerData)
     this.api.post('users/create/', this.registerData).subscribe(
       res => {
         this.response = res
         console.log(this.response)
         // this.route('signin')
+        this.loader=false;
       },
       err => {
         console.log(err)
+        this.loader=false;
       }
     )
   }

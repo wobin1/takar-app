@@ -81,6 +81,12 @@
 
     <!-- Submit button -->
     <div class="submit-button">
-        <button (click)="register()">Register</button>
+        
+        <button (click)="register()" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+          <div class="loader" *ngIf="loader" fxFlex="10%">
+            <app-loader></app-loader>
+        </div>
+         <span fxFlex="30%"> Register</span>
+        </button>
     </div>
 </div>
