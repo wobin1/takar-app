@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HelperService } from 'src/app/services/helper-service/helper.service';
 import { LocalStorageService } from 'src/app/services/local-storage-service/local-storage.service';
 import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
@@ -14,7 +15,7 @@ export class FinancialGoalsComponent {
 
 
   savings:any;
-  constructor(private api: ServerRequestService, public store: LocalStorageService){}
+  constructor(private api: ServerRequestService, public user_id: HelperService){}
 
   ngOnInit(){
     this.getSavings()
@@ -23,11 +24,8 @@ export class FinancialGoalsComponent {
 
   // this function is getting the savings goals and percentage
   getSavings(){
-    let getId = this.store.getStoredData("takaruser")
-    console.log(getId.id)
-    let user_id = getId.id
 
-    this.api.get('savings/').subscribe(
+    this.api.get('savings/' + this.user_id.getUserId()).subscribe(
       res=>{
         this.savings = res,
         console.log(this.savings)

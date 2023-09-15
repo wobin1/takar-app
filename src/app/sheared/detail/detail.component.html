@@ -1,0 +1,182 @@
+<div class="section-layout">
+    <div class="section app-container" *ngIf="detail=='alawi'">
+        <div class="section-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="title">{{page}} Detail</div>
+            <div class="action-button" *ngIf="action">{{button}}</div>
+        </div>
+        <div class="divider"></div>
+        <div class="section-body">
+            
+            <div class="body" fxLayout="row">
+                <div class="col-1" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Product Name</div>
+                        <div class="detail-content">{{alawiDetail.product_name}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Product Sequence</div>
+                        <div class="detail-content">{{alawiDetail.payment_sequence}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Split Amount</div>
+                        <div class="detail-content">{{alawiDetail.amount_to_be_paid}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Product Balance</div>
+                        <div class="detail-content">{{alawiDetail.product_balance}}</div>
+                    </div>
+                    
+                </div>
+                <div class="col-2" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Product Owner</div>
+                        <div class="detail-content">{{alawiDetail.product_owner}}</div>
+                    </div>
+                   
+
+                    <div class="details">
+                        <div class="detail-title">Initial Deposite</div>
+                        <div class="detail-content">{{alawiDetail.initial_deposite}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Reciepient</div>
+                        <div class="detail-content">{{alawiDetail.reciepient}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Payment Date</div>
+                        <div class="detail-content">{{alawiDetail.payment_date| date:'short'}}</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            
+        </div>
+    </div>
+
+
+    <div class="section app-container" *ngIf="detail=='savings'">
+        <div class="section-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="title">{{page}} Detail</div>
+            <div class="action-button" *ngIf="action">{{button}}</div>
+        </div>
+        <div class="divider"></div>
+
+            <div class="body" fxLayout="row" >
+                <div class="col-1" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Savings Name</div>
+                        <div class="detail-content">{{savingsDetail.savings_name}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Savings Goal</div>
+                        <div class="detail-content">{{savingsDetail.savings_goal}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Amount Saved</div>
+                        <div class="detail-content">{{savingsDetail.amount_saved}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Balance To Reach Goal</div>
+                        <div class="detail-content">{{savingsDetail.savings_goal - savingsDetail.amount_saved}}</div>
+                    </div>
+                    
+                </div>
+                <div class="col-2" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Savings Owner</div>
+                        <div class="detail-content">{{savingsDetail.savings_owner}}</div>
+                    </div>
+                   
+
+                    <div class="details">
+                        <div class="detail-title">Creation Date</div>
+                        <div class="detail-content">{{savingsDetail.creation_date}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Reciepient</div>
+                        <div class="detail-content">{{savingsDetail.reciepient}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">deadline</div>
+                        <div class="detail-content">{{savingsDetail.deadline| date:'short'}}</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            
+    </div>
+
+
+    <div class="section app-container" *ngIf="detail=='transaction'">
+        <div class="section-header" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="title">{{page}} Detail</div>
+            <div class="action-button" *ngIf="action">{{button}}</div>
+        </div>
+        <div class="divider"></div>
+
+            <div class="body" fxLayout="row" >
+                <div class="col-1" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Transaction Id</div>
+                        <div class="detail-content">{{transactionDetail.id}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Transaction Date</div>
+                        <div class="detail-content">{{transactionDetail.transaction_date| date:"short"}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Transaction Type</div>
+                        <div class="detail-content">{{transactionDetail.transaction_type}}</div>
+                    </div>
+
+                    
+                </div>
+                <div class="col-2" fxFlex="45%">
+                    <div class="details">
+                        <div class="detail-title">Amount</div>
+                        <div class="detail-content">{{transactionDetail.transaction_amount}}</div>
+                    </div>
+                    
+
+                    <div class="details">
+                        <div class="detail-title">Description</div>
+                        <div class="detail-content">{{transactionDetail.transaction_description}}</div>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail-title">Customer</div>
+                        <div class="detail-content">{{transactionDetail.customer_id}}</div>
+                    </div>
+
+               >
+
+
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            
+    </div>
+  
+</div>

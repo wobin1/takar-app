@@ -3,7 +3,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-    width: 17.938rem;
+    width: 287px;
     height: 100%;
     background: #121B28;
 }
@@ -45,12 +45,13 @@ mat-sidenav {
 }
 
 .logo {
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.02em;
+    padding-left: 2rem;
 
     color: #A0A4A9;
 
@@ -61,6 +62,7 @@ mat-sidenav {
 }
 
 .menu {
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,11 +76,12 @@ mat-sidenav {
     justify-content: flex-start;
     align-items: center;
     padding: 5%;
+    padding-left: 2rem;
 
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.02em;
     color: #c8c7c7;
@@ -93,12 +96,12 @@ mat-sidenav {
 }
 
 .item:hover {
-    background: #4461F2;
-    color: #FFFFFF;
+    background: hsla(0, 0%, 100%, 1);
+    color: #121B28;
 }
 
 .item:active {
-    background-color: #8593d8;
+    background-color: hsla(0, 0%, 100%, 1);
     transform: scale(0.98);
 
     transition: background-color 0.5s;

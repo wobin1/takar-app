@@ -4,14 +4,28 @@
     src: url('/assets/fonts/Gilroy-FREE/Gilroy-Light.otf')
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url('/assets/fonts/static/Inter-Regular.ttf')
+}
+
 html, body {
     height: 100%;
     margin: 0;
     width: 100%;
+    display: flex;
+    justify-content: center ;
+}
+
+.content {
+    width: 100%;
+    max-width: 1512px;
+    max-height: 982px;
 }
 
 :root {
-    --font-family: "Rajdhani"
+    --font-family: "Rajdhani";
+    --font-family-Inter: "Inter";
 
     --grey1: hsl(0, 0%, 15%);
     --grey2: hsl(0, 0%, 25%);
@@ -57,6 +71,11 @@ html, body {
 .app-container {
     margin: 0 auto;
     width: min(92%, 80rem)
+}
+
+.divider {
+    margin-top: 1rem;
+    border: 1px solid rgba(180, 179, 179, 0.5);
 }
 
 /* @media(min-width: 500px){

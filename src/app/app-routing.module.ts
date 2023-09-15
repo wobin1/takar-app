@@ -16,6 +16,9 @@ import { TransactionsComponent } from './main-app/transactions/transactions.comp
 import { AccountVerificationComponent } from './auth/account-verification/account-verification.component';
 import { ForgetPasswordVerificationComponent } from './auth/forget-password-verification/forget-password-verification.component';
 import { SavingsComponent } from './main-app/savings/savings.component';
+import { ProductDetailComponent } from './main-app/alawi/product-detail/product-detail.component';
+import { SavingsDetailComponent } from './main-app/savings/savings-detail/savings-detail.component';
+import { TransactionDetailComponent } from './main-app/transactions/transaction-detail/transaction-detail.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent, children: [
@@ -32,8 +35,11 @@ const routes: Routes = [
   {path: 'app', component: MainAppComponent, children: [
     {path: 'dashboard', component: DashboardComponent},
     {path: 'alawance', component: AlawiComponent},
+    {path: 'alawance/:id', component: ProductDetailComponent},
     {path: 'transactions', component: TransactionsComponent},
-    {path: 'savings', component: SavingsComponent}
+    {path: 'transactions/:id', component: TransactionDetailComponent},
+    {path: 'savings', component: SavingsComponent},
+    {path: 'savings/:id', component: SavingsDetailComponent}
   ]}
 ];
 

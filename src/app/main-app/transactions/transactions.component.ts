@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoutingService } from 'src/app/services/routing-service/routing.service';
 
 @Component({
   selector: 'app-transactions',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./transactions.component.css']
 })
 export class TransactionsComponent {
+
+  constructor(private router: RoutingService){}
+
 
 }

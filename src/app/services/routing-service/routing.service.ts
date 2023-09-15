@@ -49,9 +49,11 @@ export class RoutingService {
     if(page=='forget-password-verificaton'){
       this.router.navigateByUrl('forget-password-verificaton')
     }
-    
-    
-    
 
+  }
+
+  // this fuction route to detail page
+  routeDetail(page:string){
+    this.router.navigateByUrl(page)
   }
 }

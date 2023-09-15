@@ -10,8 +10,8 @@
                     <th scope="col">Product balance</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr *ngFor="let row of products.data">
+                <tbody *ngFor="let row of products.data">
+                  <tr (click)="getProductDetail('app/alawance/' + row.id)">
                     <td class="name"> 
                         {{row.product_name}} 
                         

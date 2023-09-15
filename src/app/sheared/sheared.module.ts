@@ -9,6 +9,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { MaterialModule } from '../material/material.module';
 import { LoaderComponent } from './loader/loader.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DetailComponent } from './detail/detail.component';
 
 
 
@@ -19,7 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     RegisterComponent,
     AppHeaderComponent,
-    LoaderComponent
+    LoaderComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     RegisterComponent,
     AppHeaderComponent,
-    LoaderComponent
+    LoaderComponent,
+    DetailComponent
     
   ]
 })

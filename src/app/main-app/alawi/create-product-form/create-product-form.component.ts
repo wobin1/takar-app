@@ -16,7 +16,7 @@ export class CreateProductFormComponent {
     "product_owner": "",
     "product_name": "",
     "payment_sequence": "",
-    "amount_to_be_paid": "",
+    "amount_to_be_paid": 0,
     "initial_deposite": 0,
     "product_balance": 0,
     "reciepient": "",

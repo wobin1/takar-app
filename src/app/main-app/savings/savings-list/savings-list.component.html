@@ -7,74 +7,19 @@
         <th scope="col">Amount saved</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let row of savings.data">
+    <tbody *ngFor="let row of savings.data">
+      <tr (click)="getSavingsDetail('app/savings/' + row.id)">
         <td class="name"> 
             {{row.savings_name}}
         </td>
         <td >
           <div class="type">
-              <span>Food</span>
+              <span>{{row.savings_goal}}</span>
           </div>
           
         </td>
-        <td>5 march 2023</td>
-        <td>₦500,000</td>
-      </tr>
-
-
-      <tr>
-        <td class="name"> 
-            <div class="profile-image">
-                <div class="image">
-                    <div class="img">
-                        <img src="/assets/images/cartoon/avatar.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            Jane Dani
-        </td>
-        <td >
-          <div class="type">
-            <span class="icon2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
-                  <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                  <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
-                  </svg>
-                </span>
-              <span>Shopping</span>
-          </div>
-          
-        </td>
-        <td>5 march 2023</td>
-        <td>₦80,000</td>
-      </tr>
-
-      <tr>
-        <td class="name"> 
-            <div class="profile-image">
-                <div class="image">
-                    <div class="img">
-                        <img src="/assets/images/cartoon/avatar.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            John Doe
-        </td>
-        <td >
-          <div class="type">
-            <span class="icon1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
-                  <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                  <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
-                  </svg>
-                </span>
-              <span>savings</span>
-          </div>
-          
-        </td>
-        <td>9 march 2023</td>
-        <td>₦350,000</td>
+        <td>{{row.creation_date| date:'short'}}</td>
+        <td>{{row.amount_saved}}</td>
       </tr>
 
       

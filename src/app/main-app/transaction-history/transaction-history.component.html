@@ -12,8 +12,8 @@
         <th scope="col">description</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let row of transaction_history.data">
+    <tbody *ngFor="let row of transaction_history.data">
+      <tr (click)="getTransactionDetail('app/transactions/' + row.id)">
         <td class="name"> 
           {{row.transaction_type}}
         </td>
@@ -29,7 +29,7 @@
           </div>
           
         </td>
-        <td>{{ row.transaction_date | date:'medium'}}</td>
+        <td>{{ row.transaction_date | date:'short'}}</td>
         <td>{{ row.transaction_description }}</td>
       </tr>
 

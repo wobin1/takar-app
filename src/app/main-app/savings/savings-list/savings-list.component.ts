@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HelperService } from 'src/app/services/helper-service/helper.service';
+import { RoutingService } from 'src/app/services/routing-service/routing.service';
 import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
 
 @Component({
@@ -8,16 +10,26 @@ import { ServerRequestService } from 'src/app/services/server-request-service/se
 })
 export class SavingsListComponent {
   savings:any;
-  constructor(private api: ServerRequestService){}
+  constructor(private api: ServerRequestService, 
+                private user_id: HelperService,
+                private router: RoutingService){}
 
   ngOnInit(){
     this.getSavings()
   }
 
   getSavings(){
-    this.api.get('savings/').subscribe(
+    this.api.get('savings/'+ this.user_id.getUserId()).subscribe(
       res=>{this.savings = res, console.log(this.savings)},
       err=>{console.log(err)}
     )
   }
+
+
+  getSavingsDetail(page:string){
+    this.router.routeDetail(page)
+  }
+
+
+
 }

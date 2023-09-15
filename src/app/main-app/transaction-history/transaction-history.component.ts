@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LocalStorageService } from 'src/app/services/local-storage-service/local-storage.service';
 import { ServerRequestService } from 'src/app/services/server-request-service/server-request.service';
+import { RoutingService } from 'src/app/services/routing-service/routing.service';
 
 @Component({
   selector: 'app-transaction-history',
@@ -11,7 +12,9 @@ import { ServerRequestService } from 'src/app/services/server-request-service/se
 export class TransactionHistoryComponent {
 
   transaction_history:any;
-  constructor(private api: ServerRequestService, public store: LocalStorageService){}
+  constructor(private api: ServerRequestService, 
+                public store: LocalStorageService,
+                private router: RoutingService){}
 
   ngOnInit(){
     this.getHistory()
@@ -33,5 +36,11 @@ export class TransactionHistoryComponent {
       }
     )
   }
+
+  
+  getTransactionDetail(page:string){
+    this.router.routeDetail(page)
+  }
+
 
 }

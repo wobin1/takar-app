@@ -22,6 +22,9 @@ import { SavingsComponent } from './savings/savings.component';
 import { CreateSavingsComponent } from './savings/create-savings/create-savings.component';
 import { SavingsListComponent } from './savings/savings-list/savings-list.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProductDetailComponent } from './alawi/product-detail/product-detail.component';
+import { SavingsDetailComponent } from './savings/savings-detail/savings-detail.component';
+import { TransactionDetailComponent } from './transactions/transaction-detail/transaction-detail.component';
 
 
 
@@ -41,7 +44,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ProductsComponent,
     SavingsComponent,
     CreateSavingsComponent,
-    SavingsListComponent
+    SavingsListComponent,
+    ProductDetailComponent,
+    SavingsDetailComponent,
+    TransactionDetailComponent
   ],
   imports: [
     CommonModule,
