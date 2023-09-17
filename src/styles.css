@@ -53,7 +53,7 @@ html, body {
     --red6: hsl(0, 100%, 85%);
     --red7: hsl(0, 100%, 95%);
 
-    --yellow1: hsl(39, 100%, 36%);
+    --yellow: hsl(39, 100%, 36%);
     --yellow1: hsl(39, 100%, 46%);
     --yellow2: hsl(39, 100%, 56%);
     --yellow3: hsl(39, 100%, 66%);
@@ -89,4 +89,20 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #8FBDE8;}
 
 
+tr {
+    /* border: none; */
+    /* background-color: #8FBDE8; */
+}
 
+.table-header {
+    background-color: var(--grey8);
+    
+}
+
+table thead {
+    padding: 40px;
+  }
+
+td {
+    padding: 1rem;
+}

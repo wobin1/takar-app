@@ -22,7 +22,7 @@
 }
 
 .page-title {
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -60,7 +60,7 @@
 }
 
 .goal-title {
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -76,7 +76,7 @@
 }
 
 .percentage {
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;

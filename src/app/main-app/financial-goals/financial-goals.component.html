@@ -14,9 +14,9 @@
         <div class="goal-progress">
             <div class="detail">
                 <span class="goal-title">{{row.savings_name}}</span>
-                <span class="percentage">{{savings.percentage}}%</span>
+                <span class="percentage">{{row.percentage}}% </span>
             </div>
-            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value={{row.percentage}} ></mat-progress-bar>
         </div>
         
     </div>

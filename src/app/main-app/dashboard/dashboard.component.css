@@ -11,7 +11,7 @@
 
 .page-title {
     margin-top: 1rem;
-    font-family: 'Inter';
+    font-family: var(--font-family-Inter);
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -35,7 +35,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     height: 5px;
 }
 
@@ -48,7 +48,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #9198ba;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
@@ -107,7 +107,7 @@
 
     ::-webkit-scrollbar {
         width: 5px;
-        height: 10px;
+        height: 5px;
         background-color: black;
       }
       
@@ -128,7 +128,7 @@
 
     ::-webkit-scrollbar {
         width: 5px;
-        height: 10px;
+        height: 5px;
         background-color: black;
       }
       

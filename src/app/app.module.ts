@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccountVerificationComponent } from './auth/account-verification/account-verification.component';
 import { ForgetPasswordVerificationComponent } from './auth/forget-password-verification/forget-password-verification.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TableComponent } from './sheard/table/table.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ResetPasswordComponent,
     AccountVerificationComponent,
     ForgetPasswordVerificationComponent,
+    TableComponent,
+    
   ],
   imports: [
     BrowserModule,

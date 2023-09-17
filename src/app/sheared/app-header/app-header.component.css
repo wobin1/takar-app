@@ -21,6 +21,21 @@
     gap: 1rem;
 }
 
+.page-title span {
+    width: 30px;
+    height: 30px;
+    background-color: var(--grey8);
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title span:active {
+    transform: scale(0.8);
+}
+
 .notifcation-profile {
     display: flex;
     justify-content: flex-end;
