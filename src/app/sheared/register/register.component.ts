@@ -20,7 +20,7 @@ export class RegisterComponent {
     "email": "",
     "phone_number": "",
     "password": "",
-    "current_site": "https://takar-app.netlify.app/acount-verification/"
+    "current_site": "https://takar-app.netlify.app/#/acount-verification/"
   }
 
 
