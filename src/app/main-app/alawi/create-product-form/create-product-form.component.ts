@@ -20,7 +20,8 @@ export class CreateProductFormComponent {
     "initial_deposite": 0,
     "product_balance": 0,
     "reciepient": "",
-    "product_amount": ""  
+    "product_amount": "",
+    "payment_date": ""
   }
   constructor(public store: LocalStorageService, 
     private api: ServerRequestService, 
@@ -31,6 +32,9 @@ export class CreateProductFormComponent {
 
 
   createProduct(){
+
+    // this.productData.payment_date = paymentDate;
+    // this.productData.payment_date = paymentDate;
     this.loader=true;
     let getId = this.store.getStoredData("takaruser")
     console.log(getId.id)
