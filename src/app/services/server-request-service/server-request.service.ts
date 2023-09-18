@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ServerRequestService {
 
-  baseUrl="http://127.0.0.1:8000/api/";
+  baseUrl="https://takar.pythonanywhere.com/api/";
   token=""
 
   constructor(public http: HttpClient) { }
