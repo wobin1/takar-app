@@ -18,6 +18,7 @@ import { AccountVerificationComponent } from './auth/account-verification/accoun
 import { ForgetPasswordVerificationComponent } from './auth/forget-password-verification/forget-password-verification.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TableComponent } from './sheard/table/table.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { TableComponent } from './sheard/table/table.component';
     FormsModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
