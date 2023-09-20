@@ -31,10 +31,7 @@ export class CreateProductFormComponent {
   ngOnInit(){}
 
 
-  createProduct(){
-
-    // this.productData.payment_date = paymentDate;
-    // this.productData.payment_date = paymentDate;
+  createProduct(){;
     this.loader=true;
     let getId = this.store.getStoredData("takaruser")
     console.log(getId.id)
