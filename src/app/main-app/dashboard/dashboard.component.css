@@ -71,8 +71,8 @@
     }
 
     .section1, .section2 {
-        width: 100%;
-        height: 100vh;
+        width: 97%;
+        height: auto;
         padding: 3%;
     }
 
@@ -101,7 +101,7 @@
     .transaction-history {
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
         margin-top: 2rem;
-        height: 33%;
+        height: 50%;
         overflow-y: scroll;
     }
 
